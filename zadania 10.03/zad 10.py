@@ -8,4 +8,4 @@ for x in range(1,d,1):
     print("A")
     for y in range(x,0,-1):
         sys.stdout.write('A')
-sys.stdout.write('A')
+ #       :D 
