@@ -1,4 +1,4 @@
-import sys
+
 d=int(input("liczba < 9 i > 3"))
 while d>9 or d<3:
     d=int(input("liczba < 9 i > 3"))
