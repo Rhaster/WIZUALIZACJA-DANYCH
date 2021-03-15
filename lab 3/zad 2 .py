@@ -6,7 +6,7 @@ def incr():
      global count
      count += 1
 random.seed()
-A = np.zeros((4,4))
+A = np.zeros((4,4)) #
 for x in range(0,4):
     for j in range(0,4):
         d=random.randint(0,9)
