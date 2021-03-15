@@ -1,7 +1,5 @@
-
+    
 d=int(input("liczba < 9 i > 3"))
-while d>9 or d<3:
-    d=int(input("liczba < 9 i > 3"))
 f=1
 u=int(d/2)
 for x in range(d,u,-1):
@@ -16,5 +14,4 @@ else:
     f-=2
     for j in range(1,u+1,1):
         print(" "*j+ "o"*f)
-        f-=2 
-        
+        f-=2
