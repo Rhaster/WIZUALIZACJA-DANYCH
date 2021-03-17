@@ -7,11 +7,10 @@ for x in range(d,u,-1):
     f+=2
 if(d%2!=0):
     f-=4
-    for j in range(2,u+2,1):
-        print(" "*j+ "o"*f)
-        f-=2 
+    g=2
 else:
     f-=2
-    for j in range(1,u+1,1):
-        print(" "*j+ "o"*f)
-        f-=2
+    g=1
+for j in range(g,u+g,1):
+    print(" "*j+ "o"*f)
+    f-=2 
