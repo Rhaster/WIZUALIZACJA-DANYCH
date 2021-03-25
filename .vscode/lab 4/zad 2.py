@@ -1,2 +1,3 @@
-plik=read("zad1111.txt","r")
-print(plik)
+plik=open("zad1111.txt","r")
+xd=plik.readlines()
+print(xd)
