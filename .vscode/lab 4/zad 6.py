@@ -9,6 +9,20 @@ class slowa():
             print("sa to angramy")
         else:
             print("nie sa ")
-d=slowa("mata","tama")
+    def sprawdz_czy_metagramy(self):
+        g=0
+        for x in range(0,len(self.a)):
+            if self.a[x]!=self.b[x]:
+                g+=1
+        if g==1:
+            print("sa to metagramy")
+        else:
+            print("nie sa to metagramy")
+        print(g)
+    def wyświetl_wyrazy(self):
+        print(self.a,self.b)
+d=slowa("gama","gata")
 print(d.sprawdz_czy_palindrom())
 print(d.sprawdz_czy_anagramy())
+print(d.sprawdz_czy_metagramy())
+print(d.wyświetl_wyrazy())
