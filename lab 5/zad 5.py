@@ -1,57 +1,42 @@
-class Ksztalty:
-    # definicja konstruktora
-    def __init__(self, x, y):
-        # deklarujemy atrybuty
-        # self wskazuje że chodzi o zmienne właśnie definiowanej klasy
-        self.x=x 
-        self.y=y
-        self.opis = "To będzie klasa dla ogólnych kształtów"
+class Osoba:
 
-    def pole(self):
-        return self.x * self.y
+    def __init__(self, imie, nazwisko):
+        self.imie = imie
+        self.nazwisko = nazwisko
 
-    def obwod(self):
-        return 2 * self.x + 2 * self.y
-
-    def dodaj_opis(self, text):
-        self.opis = text
-
-    def skalowanie(self, czynnik):
-        self.x = self.x * czynnik
-        self.x = self.y * czynnik
+    def przedstaw_sie(self):
+        return "{} {}".format(self.imie, self.nazwisko)
 
 
-# a teraz klasa która dziedziczy po klasie Ksztalty
-class Kwadrat(Ksztalty):
+class Pracownik(Osoba):
 
-    def __init__(self, x):
-        self.x =x
-        self.y=x
+    def __init__(self, imie, nazwisko, pensja):
+        Osoba.__init__(self, imie, nazwisko)
+        # lub
+        # super().__init__(imie, nazwisko)
+        self.pensja = pensja
 
-# i jeszcze klasa, która dziedziczy po klasie Kwadrat
-# bedzie definiwoać figurę złożoną z 3 kwadratów w kształcie litery L
-#  _
-# | |_
-# |_ _| 
-class KwadratowaLiteraL(Kwadrat):
+    def przedstaw_sie(self):
+        return "{} {} i zarabiam {}".format(self.imie, self.nazwisko, self.pensja)
 
-    def obwod(self):
-        return 8 * self.x
 
-    def pole(self):
-        return 3 * self.x * self.y
+class Menadzer(Pracownik):
 
-print("inicjujemy klasę Kwadrat")
-figura = Kwadrat(5)
+    def przedstaw_sie(self):
+        return "{} {}, jestem menadżerem i zarabiam {}".format(self.imie, self.nazwisko, self.pensja)
 
-# sprawdzamy metody z klasy bazowej
-print(figura.pole())
 
-print(figura.obwod())
-figura.dodaj_opis("Kwadrat")
+jozek = Pracownik("Józek", "Bajka", 2000)
+adrian = Menadzer("Adrian", "Mikulski", 12000)
 
-print(figura.opis)
-
-figura.skalowanie(0.3)
-
-print(figura.obwod())
+print(jozek.przedstaw_sie())
+print(adrian.przedstaw_sie())
+x=isinstance(jozek,Pracownik)
+print(x)
+y=isinstance(jozek,Osoba)
+print(y)
+z=isinstance(jozek,Menadzer)
+print(z)
+print(isinstance(adrian,Pracownik))
+print(isinstance(adrian,Osoba))
+print(isinstance(adrian,Menadzer))

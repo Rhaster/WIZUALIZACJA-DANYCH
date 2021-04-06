@@ -26,8 +26,8 @@ class Kwadrat(Ksztalty):
         self.y = x
 
     def __add__(self,kwadrat):
-        return self.x+kwadrat.x
+        return self.x+kwadrat.y
 
 kw = Kwadrat(5)
 kw1=Kwadrat(2)
-print(kw+kw1)
+print(kw.__add__(kw1))
