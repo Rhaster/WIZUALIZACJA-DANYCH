@@ -12,15 +12,15 @@ class ubrania(Material):
         self.dl=dla_kogo
         self.r=rozmiar
     def wyswietl_dane(self):
-        print(self.k,self.dl,self.ro,self.r,self.s,self.d)
+        print(self.k,self.dl,self.r)
 class sweter(ubrania):
     def __init__(self,rodzaj_swetra):
         self.ro=rodzaj_swetra
     def wyswietl_danee(self):
         return self.ro
-d=ubrania("Polipropylen","20cm","40cm","zolty","Kobieta","M")
-##p=Material("skarpety",20,30)
-##g=sweter("golf")
-##print(p.wyswietl_nazwe())
+d=ubrania("Polipropylen","20cm","40cm")
+p=Material("skarpety",20,30)
+g=sweter("golf")
+print(p.wyswietl_nazwe())
 print(d.wyswietl_dane())
-##print(g.wyswietl_danee())
+print(g.wyswietl_danee())
