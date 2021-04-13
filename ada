@@ -1,1 +1,0 @@
-goha/n/ngoha/n/npies
