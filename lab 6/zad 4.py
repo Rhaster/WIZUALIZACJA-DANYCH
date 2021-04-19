@@ -1,6 +1,6 @@
 import numpy as np
-import math as m
-def michaloddawajenergola(n,k):
-    l = np.logspace(n, n**k, num=k,base=m.sqrt(n),dtype='int')
-    return l
-print(michaloddawajenergola(2,3))
+def funkcja(n,k):
+    
+    l = np.logspace(n, n^k,num=k,base=n,dtype=int,endpoint=False)
+    print(l)
+funkcja(2,4)
