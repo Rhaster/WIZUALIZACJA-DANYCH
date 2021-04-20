@@ -1,6 +1,5 @@
 import numpy as np
 def funkcja(n,k):
-    
-    l = np.logspace(n, n^k,num=k,base=n,dtype=int,endpoint=False)
+    l = np.logspace(1, k,num=k,base=n,dtype=int)
     print(l)
-funkcja(2,4)
+funkcja(2,5)
