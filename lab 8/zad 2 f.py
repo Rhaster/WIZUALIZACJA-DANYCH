@@ -3,10 +3,8 @@ import numpy as np
 import xlrd
 import openpyxl
 df = pn.read_excel('imiona.xlsx')
-df= df.groupby(['Plec'])
-y=df[(df['Rok']==2005) &(df['Plec']=='M')]
-t=df[(df['Rok']==2005) &(df['Plec']=='K')]
-print(y)
-print(t)
-print(y.max())
+y=df.groupby(['Rok','Plec'])
+t=y.get_group((2011,'K'))
+k=y.get_group((2011,'M'))
+print(k.max())
 print(t.max())
