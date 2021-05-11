@@ -1,4 +1,4 @@
-import pandas as pn  
+import pandas as pn 
 import numpy as np
 import csv 
 import matplotlib.pyplot as plt
@@ -8,5 +8,5 @@ wykres = grupa.plot.bar()
 wykres.set_ylabel('Liczba')
 wykres.set_xlabel('Plec')
 wykres.legend()
-plt.title('Roki zliczba urodzen')
+plt.title('ilosc zamowien dla sprzedawcow uni')
 plt.show()
