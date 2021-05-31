@@ -12,7 +12,7 @@ def zad8(text):
     for j in range(len(text)):
 	    for x in range(len(y)):
             if text[j][0] in M[x]:
-                print(text[j])
+                vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvprint(text[j])
 
 text =["Grzechownia","Dybala","Mostkowiak","Zytni"] #cos sie psuje nie wiem co chca te spacje da pan z 1 pkt ;d 
 zad8(text)
